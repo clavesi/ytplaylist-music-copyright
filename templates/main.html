@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--! Dark mode and light mode !-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Copyright Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <form action="">
+                <div class="input">
+                    <label for"link">Paste link below</label>
+                    <input type="text" name="link" id="link" placeholder="youtube.com/playlist?list=" required>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
