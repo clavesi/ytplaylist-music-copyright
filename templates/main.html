@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--! Dark mode and light mode !-->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +11,7 @@
     <script type=text/javascript>
         $(function() { 
             $("#mybutton").click(function (event) { 
-                $.getJSON('/process', { }, function(data) { }); 
+                $.getJSON('/videos', { }, function(data) { }); 
                 return true;
             }); 
         }); 
@@ -22,7 +20,9 @@
 
 <body>
     <header>
-        <img class="logo" src="/static/img/vod channel.jpg" alt="logo">
+        <a href="/">
+            <img class="logo" src="/static/img/vod channel.jpg" alt="logo">
+        </a>
         <a href="https://github.com/clavesi/ytplaylist-music-copyright/tree/development">
             <img class="github_logo" src="/static/img/github-logo.png" alt="github logo">
         </a>
@@ -32,7 +32,7 @@
 
     <section>
         <div class="container">
-            <form action="{{ url_for('process') }}" method="POST">
+            <form action="{{ url_for('videos') }}" method="POST">
                 <div class="input">
                     <label for"link">Paste link below</label>
                     <div class="link_box">
@@ -46,9 +46,27 @@
 
     <hr>
 
-    <div class="videos">
-        <h1>{{ artist }} - {{ song }} </h1>
+    {% if videos %}
+
+    <h3 id="copyright">{{ numCopy }} out of {{ numTotal }} videos had obvious copyright</h3>
+    <div class="cards">
+        <!-- title, artist, track, webpage_url, thumbnail -->
+        {% for video in videos %}
+        <div class="card">
+            <div class="thumbnail">
+                <a href="{{ video[3] }}" target="_blank">
+                    <img src="{{ video[4] }}" alt="Thumbnail">
+                </a>
+            </div>
+            <div class="content">
+                <h4>{{ video[0] }}</h4>
+                <p>{{ video[1] }} - {{ video[2] }}</p>
+            </div>
+        </div>
+        {% endfor %}
     </div>
+
+    {% endif %}
 </body>
 
 </html>

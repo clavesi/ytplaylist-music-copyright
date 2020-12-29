@@ -1,5 +1,5 @@
 * {
-    background-color: #d1ccc4;
+    background-color: #E8ECEB;
 }
 
 body {
@@ -28,7 +28,7 @@ header {
 section {
     width: 100%;
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: center;
     padding: 12px 0px;
 }
@@ -55,16 +55,43 @@ section {
 .input input {
     width: 75%;
     font-size: 1em;
-    border: 1px solid black;
-    border-radius: 4px;
+    border: 1px solid #2D3E4E;
     margin: 20px 0px;
     padding: 20px;
 }
 
 .input button {
-    background-color: bisque;
+    background-color: #E09E50;
     width: 15%;
     height: 5em;
-    border: 1px solid black;
-    border-radius: 4px;
+    border: 1px solid #2D3E4E;
+}
+
+#copyright {
+    text-align: center;
+    font-size: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 50px;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 75%;
+    box-shadow: 5px 8px 15px 0px #2D3E4E;
+    transition: 0.3s;
+}
+
+.thumbnail a img {
+    width: 100%;
+}
+
+.content {
+    padding: 15px;
+    padding: .5rem;
 }
