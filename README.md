@@ -1,6 +1,11 @@
-# ytplaylist-music-copyright
-A web app for detecting if any videos in a playlist contains copyrighted music.
+# YouTube Playlist Copyright Detector
 
-This program utilizes YouTube "Music in this video" system to detect whether a song or video has clearly
-copyrighted music. This is useful for building a playlist to use in streaming or recording that won't
-get you copyrighted.
+*Read this in: [Français](README.fr.md)*
+
+This is a Flask web app that uses [youtube_dl](https://pypi.org/project/youtube_dl/) to check a YouTube playlist and search for any obvious copyright. Find it [here](https://ytplaylist-copyright.herokuapp.com/).
+
+This is done using YouTube's "Music in this video" section at the bottom of a video description.
+
+![Image showing "Music in this video" section of description](/static/img/musicinvideo.PNG)
+
+Of course this isn't flawless, but it's a quick way to check if a playlist has a song that's copyright is enforced by a music label.
