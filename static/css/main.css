@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     background-color: #E8ECEB;
 }
@@ -25,6 +28,10 @@ header {
     height: 100px;
 }
 
+hr {
+    color: #2D3E4E;
+}
+
 section {
     width: 100%;
     display: flex;
@@ -44,6 +51,8 @@ section {
 
 .input label {
     font-size: 2em;
+    font-family: "Catamaran", sans-serif;
+    font-weight: 600;
     width: 100%;
 }
 
@@ -61,13 +70,19 @@ section {
 }
 
 .input button {
-    background-color: #E09E50;
+    background-color: #FF0000;
     width: 15%;
     height: 5em;
     border: 1px solid #2D3E4E;
+    color: #FFFFFF;
+    font-family: "Catamaran", sans-serif;
+    font-weight: 600;
 }
 
-#copyright {
+
+h3 {
+    font-family: "Catamaran", sans-serif;
+    font-weight: 600;
     text-align: center;
     font-size: 25px;
 }
@@ -83,7 +98,7 @@ section {
 
 .card {
     width: 75%;
-    box-shadow: 5px 8px 15px 0px #2D3E4E;
+    box-shadow: -5px 8px 15px 0px #2D3E4E;
     transition: 0.3s;
 }
 
@@ -92,10 +107,7 @@ section {
 }
 
 .content {
-    padding: 15px;
     padding: .5rem;
-}
-
-#no_videos {
-    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
 }
