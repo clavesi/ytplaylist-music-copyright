@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    background-color: #E8ECEB;
+}
+
+body {
+    width: 50%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 2.5%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.github_logo {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+hr {
+    color: #2D3E4E;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12px 0px;
+}
+
+.container {
+    width: 90%;
+}
+
+.input {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input label {
+    font-size: 2em;
+    font-family: "Catamaran", sans-serif;
+    font-weight: 600;
+    width: 100%;
+}
+
+.link_box {
+    width: 100%;
+    height: 5em;
+}
+
+.input input {
+    width: 75%;
+    font-size: 1em;
+    border: 1px solid #2D3E4E;
+    margin: 20px 0px;
+    padding: 20px;
+}
+
+.input button {
+    background-color: #FF0000;
+    width: 15%;
+    height: 5em;
+    border: 1px solid #2D3E4E;
+    color: #FFFFFF;
+    font-family: "Catamaran", sans-serif;
+    font-weight: 600;
+}
+
+
+h3 {
+    font-family: "Catamaran", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 50px;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 75%;
+    box-shadow: -5px 8px 15px 0px #2D3E4E;
+    transition: 0.3s;
+}
+
+.thumbnail a img {
+    width: 100%;
+}
+
+.content {
+    padding: .5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
