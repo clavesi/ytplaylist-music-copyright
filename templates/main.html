@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist Copyright Detection</title>
+    <title>Playlist Copyrights</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="/static/img/logo.png">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
     <script type=text/javascript>
@@ -21,7 +22,7 @@
 <body>
     <header>
         <a href="/">
-            <img class="logo" src="/static/img/vod channel.jpg" alt="logo">
+            <img class="logo" src="/static/img/logo.png" alt="logo">
         </a>
         <a href="https://github.com/clavesi/ytplaylist-music-copyright/tree/development">
             <img class="github_logo" src="/static/img/github-logo.png" alt="github logo">
@@ -47,26 +48,27 @@
     <hr>
 
     {% if videos %}
-
-    <h3 id="copyright">{{ numCopy }} out of {{ numTotal }} videos had obvious copyright</h3>
-    <div class="cards">
-        <!-- title, artist, track, webpage_url, thumbnail -->
-        {% for video in videos %}
-        <div class="card">
-            <div class="thumbnail">
-                <a href="{{ video[3] }}" target="_blank">
-                    <img src="{{ video[4] }}" alt="Thumbnail">
-                </a>
+        <h3 id="copyright">{{ numCopy }} out of {{ numTotal }} videos had obvious copyright</h3>
+        <div class="cards">
+            <!-- title, artist, track, webpage_url, thumbnail -->
+            {% for video in videos %}
+            <div class="card">
+                <div class="thumbnail">
+                    <a href="{{ video[3] }}" target="_blank">
+                        <img src="{{ video[4] }}" alt="Thumbnail">
+                    </a>
+                </div>
+                <div class="content">
+                    <h4>{{ video[0] }}</h4>
+                    <p>{{ video[1] }} - {{ video[2] }}</p>
+                </div>
             </div>
-            <div class="content">
-                <h4>{{ video[0] }}</h4>
-                <p>{{ video[1] }} - {{ video[2] }}</p>
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-
+    {% elif videos is defined %}
+        <h3 id="no_videos">No videos with obvious copyright detected</h3>
     {% endif %}
+
 </body>
 
 </html>

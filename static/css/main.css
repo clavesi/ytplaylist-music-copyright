@@ -95,3 +95,7 @@ section {
     padding: 15px;
     padding: .5rem;
 }
+
+#no_videos {
+    text-align: center;
+}
